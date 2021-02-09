@@ -78,7 +78,7 @@ Animator:
   m_GameObject: {fileID: 1711297263965314808}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0d8bb75554eee0e458ea8ada9ee0fdfa, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2706626592f387b48bb8311f7675368d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc381f73c7917be46b466102d0ecc577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Gameover: {fileID: 0}
+  player: {fileID: 0}
   delayEnemy: 3
   isWalking: 0
 --- !u!195 &1981256295793894319
