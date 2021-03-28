@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Text;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreController : MonoBehaviour {
 
@@ -37,6 +38,6 @@ public class ScoreController : MonoBehaviour {
 
 
 	public void Restart(){
-		Application.LoadLevel (0);
+		SceneManager.LoadScene(0);
 	}
 }

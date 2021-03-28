@@ -40,9 +40,9 @@ public class EnemyController : MonoBehaviour {
 
 			GameObject[] enemys = GameObject.FindGameObjectsWithTag("Enemy");
 			
-			foreach (GameObject enemy in enemys) {
-				enemy.SendMessage("PlayerDie");
-			}
+			// foreach (GameObject enemy in enemys) {
+			// 	enemy.SendMessage("PlayerDie");
+			// }
 
 			col.gameObject.GetComponent<PlayerMovement>().enabled = false;
 			Gameover.SetActive(true);
