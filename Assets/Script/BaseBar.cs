@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class BaseBar : MonoBehaviour
 {
@@ -9,9 +10,13 @@ public class BaseBar : MonoBehaviour
     public float speedRotation = 10f;
     public GameObject[] Enemy;
     public float speed = 0f;
+
+    public PickupBarEvent pickupBarEvent = new PickupBarEvent();
     
     private void Start() {
         Enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        EndLine endLine = FindObjectOfType<EndLine>().GetComponent<EndLine>();
+        endLine.AddPickupListener(this.gameObject);
     }
 
     private void Update() {
@@ -28,7 +33,11 @@ public class BaseBar : MonoBehaviour
             n.GetComponent<NavMeshAgent>().speed +=1;
         }
         Destroy(gameObject);
+    }
 
+    public void PickupListener(UnityAction<int> listener){
+        pickupBarEvent.AddListener(listener);
+        
     }
 
     

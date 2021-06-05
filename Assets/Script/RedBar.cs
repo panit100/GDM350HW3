@@ -9,7 +9,7 @@ public class RedBar : BaseBar
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Player"){
             AddSpeedEmemy();
-            other.GetComponent<PlayerMovement>().score += score;
+                pickupBarEvent.Invoke(1);
             Destroy(gameObject);
         }
     }

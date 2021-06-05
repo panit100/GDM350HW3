@@ -9,7 +9,7 @@ public class GoldBar : BaseBar
         if(other.gameObject.tag == "Player"){
             player = other.GetComponent<PlayerMovement>();
             AddSpeedPlayer();
-            player.score += score;
+                pickupBarEvent.Invoke(1);
             Destroy(gameObject);
         }
     }
